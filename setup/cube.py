@@ -29,7 +29,7 @@ def main():
                 0.5, 0.5, -0.5,   0.0, 0.0, 1.0,
                 -0.5, 0.5, -0.5,  1.0, 1.0, 1.0]
 
-    quad = numpy.array(cube, dtype = numpy.float32)
+    cube = numpy.array(cube, dtype = numpy.float32)
 
     indices = [0, 1, 2, 2, 3, 0,
                4, 5, 6, 6, 7, 4,
@@ -68,7 +68,7 @@ def main():
 
     VBO = glGenBuffers(1)
     glBindBuffer(GL_ARRAY_BUFFER, VBO)
-    glBufferData(GL_ARRAY_BUFFER, 192, quad, GL_STATIC_DRAW)
+    glBufferData(GL_ARRAY_BUFFER, 192, cube, GL_STATIC_DRAW)
 
     EBO = glGenBuffers(1)
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO)
